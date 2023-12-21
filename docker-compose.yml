@@ -1,0 +1,22 @@
+version: '3'
+services:
+  # initdb:
+  #   image: apache/airflow:latest
+  #   volumes:
+  #     - ~/kgeesawor/git/dags:/opt/airflow/dags
+  #     - ~/kgeesawor/git/logs:/opt/airflow/logs
+  #     - ~/kgeesawor/git/plugins:/opt/airflow/plugins
+  #   command: airflow db upgrade
+  airflow:
+    image: apache/airflow:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - LOAD_EX=n
+    volumes:
+      - ~/kgeesawor/git/dags:/opt/airflow/dags #./dags:/opt/airflow/dags
+      - ~/kgeesawor/git/logs:/opt/airflow/logs
+      - ~/kgeesawor/git/plugins:/opt/airflow/plugins
+    restart: always
+    command: bash -c "airflow db upgrade && airflow webserver"
+
