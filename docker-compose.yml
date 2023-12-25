@@ -1,18 +1,14 @@
 version: '3'
 services:
-  # initdb:
-  #   image: apache/airflow:latest
-  #   volumes:
-  #     - ~/kgeesawor/git/dags:/opt/airflow/dags
-  #     - ~/kgeesawor/git/logs:/opt/airflow/logs
-  #     - ~/kgeesawor/git/plugins:/opt/airflow/plugins
-  #   command: airflow db upgrade
   postgres:
     image: postgres:latest
     environment:
       - POSTGRES_USER=airflow
       - POSTGRES_PASSWORD=airflow
       - POSTGRES_DB=airflow 
+    ports:
+      - "5432:5432"
+
   airflow:
     image: apache/airflow:latest
     depends_on:
@@ -21,7 +17,7 @@ services:
       - "8080:8080"
     environment:
       - LOAD_EX=n
-      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
       - ~/kgeesawor/git/dags:/opt/airflow/dags #./dags:/opt/airflow/dags
       - ~/kgeesawor/git/logs:/opt/airflow/logs
@@ -31,12 +27,13 @@ services:
       bash -c "airflow db upgrade && 
       airflow users create --username admin --password admin --firstname FIRST_NAME --lastname LAST_NAME --role Admin --email admin@example.com && 
       airflow webserver"
+
   scheduler:
     image: apache/airflow:latest
     depends_on:
       - postgres
     environment:
-      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
       - ~/kgeesawor/git/dags:/opt/airflow/dags
       - ~/kgeesawor/git/logs:/opt/airflow/logs
@@ -45,3 +42,16 @@ services:
     command: >
       bash -c "sleep 30 &&
       airflow scheduler"
+
+  dbt:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    volumes:
+      - ~/.dbt:/root/.dbt
+      - ~/git/app:/dbt
+    command: ["run"]
+
+      
