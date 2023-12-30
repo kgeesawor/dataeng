@@ -1,5 +1,20 @@
 version: '3'
 services:
+  minio:
+    image: minio/minio
+    container_name: minio
+    volumes:
+      - ~/minio/data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: minio123
+    command: server --console-address :9001 /data
+
+#    docker run -p 9000:9000 -p 9001:9001 --name minio -d -v ~/minio/data:/data -e "MINIO_ROOT_USER=minio" -e "MINIO_ROOT_PASSWORD=minio123" minio/minio server --console-address :9001 /data
+
   postgres:
     image: postgres:latest
     environment:
@@ -19,9 +34,10 @@ services:
       - LOAD_EX=n
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - ~/kgeesawor/git/dags:/opt/airflow/dags #./dags:/opt/airflow/dags
-      - ~/kgeesawor/git/logs:/opt/airflow/logs
-      - ~/kgeesawor/git/plugins:/opt/airflow/plugins
+      - ~/git/dags:/opt/airflow/dags #./dags:/opt/airflow/dags
+      - ~/git/logs:/opt/airflow/logs
+      - ~/git/plugins:/opt/airflow/plugins
+      - ~/git/data:/opt/airflow/data
     restart: always
     command: >
       bash -c "airflow db upgrade && 
@@ -35,9 +51,10 @@ services:
     environment:
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
     volumes:
-      - ~/kgeesawor/git/dags:/opt/airflow/dags
-      - ~/kgeesawor/git/logs:/opt/airflow/logs
-      - ~/kgeesawor/git/plugins:/opt/airflow/plugins
+      - ~/git/dags:/opt/airflow/dags
+      - ~/git/logs:/opt/airflow/logs
+      - ~/git/plugins:/opt/airflow/plugins
+      - ~/git/data:/opt/airflow/data
     restart: always
     command: >
       bash -c "sleep 30 &&
