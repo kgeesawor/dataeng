@@ -4,6 +4,7 @@ from datetime import datetime
 import pandas as pd
 from sqlalchemy import create_engine
 import io
+import os
 #from minio import Minio
 
 # Define the DAG
@@ -15,12 +16,12 @@ dag = DAG(
 )
 
 # Define the task to load data
-def load_data(filename):
-    chunk_size = 10000  # Set the desired chunk size
+def load_data(dataFolder, schemaName):
+    chunk_size = 100000  # Set the desired chunk size
     
     # Load file in chunks
-    path = "/opt/airflow/data/instacart-market-basket-analysis/"
-    reader = pd.read_csv(path + filename + ".csv", chunksize=chunk_size)
+    path = "/opt/airflow/data/" + dataFolder + "/"
+    filenames = [filename[:-4] for filename in os.listdir(path) if filename.endswith(".csv")]
     
     # Connect SQL engine to PostgreSQL
     engine = create_engine('postgresql://airflow:airflow@172.17.0.1:5432/airflow')
@@ -29,16 +30,18 @@ def load_data(filename):
     with engine.connect() as connection:
         connection.execute("CREATE SCHEMA IF NOT EXISTS instacart")
 
-    # Create table from chunks
-    for i, chunk in enumerate(reader):
-        table_name = f"{filename}"
-        chunk.to_sql(table_name, engine, if_exists='append', index=False, schema='instacart')
+    # Create table from chunks for each file
+    for filename in filenames:
+        reader = pd.read_csv(path + filename + ".csv", chunksize=chunk_size)
+        for i, chunk in enumerate(reader):
+            table_name = f"{filename}"
+            chunk.to_sql(table_name, engine, if_exists='append', index=False, schema=schemaName)
 
 # Create the task
 load_data_task = PythonOperator(
-    task_id='load_data_train',
+    task_id='load_data_instacart',
     python_callable=load_data,
-    op_kwargs={'filename': 'order_products__train'},
+    op_kwargs={'dataFolder': 'instacart-market-basket-analysis','schemaName':'instacart'},
     dag=dag,
 )
 
