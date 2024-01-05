@@ -1,0 +1,131 @@
+[2024-01-05T11:37:11.502+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_data_parquet.load_data_orders manual__2024-01-05T11:20:45.850362+00:00 [queued]>
+[2024-01-05T11:37:11.515+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_data_parquet.load_data_orders manual__2024-01-05T11:20:45.850362+00:00 [queued]>
+[2024-01-05T11:37:11.516+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-05T11:37:11.538+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): load_data_orders> on 2024-01-05 11:20:45.850362+00:00
+[2024-01-05T11:37:11.545+0000] {standard_task_runner.py:60} INFO - Started process 575 to run task
+[2024-01-05T11:37:11.551+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'load_data_parquet', 'load_data_orders', 'manual__2024-01-05T11:20:45.850362+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/load_data_parquet.py', '--cfg-path', '/tmp/tmp0hn6d4_k']
+[2024-01-05T11:37:11.556+0000] {standard_task_runner.py:88} INFO - Job 32: Subtask load_data_orders
+[2024-01-05T11:37:11.650+0000] {task_command.py:423} INFO - Running <TaskInstance: load_data_parquet.load_data_orders manual__2024-01-05T11:20:45.850362+00:00 [running]> on host edef6e683abd
+[2024-01-05T11:37:11.797+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_data_parquet' AIRFLOW_CTX_TASK_ID='load_data_orders' AIRFLOW_CTX_EXECUTION_DATE='2024-01-05T11:20:45.850362+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-05T11:20:45.850362+00:00'
+[2024-01-05T11:37:11.824+0000] {logging_mixin.py:188} INFO - starting:orders
+[2024-01-05T11:37:11.920+0000] {logging_mixin.py:188} INFO - loading chunk:0
+[2024-01-05T11:37:12.619+0000] {logging_mixin.py:188} INFO - loading chunk:1
+[2024-01-05T11:37:13.036+0000] {logging_mixin.py:188} INFO - loading chunk:2
+[2024-01-05T11:37:13.445+0000] {logging_mixin.py:188} INFO - loading chunk:3
+[2024-01-05T11:37:13.844+0000] {logging_mixin.py:188} INFO - loading chunk:4
+[2024-01-05T11:37:14.276+0000] {logging_mixin.py:188} INFO - loading chunk:5
+[2024-01-05T11:37:14.887+0000] {logging_mixin.py:188} INFO - loading chunk:6
+[2024-01-05T11:37:15.399+0000] {logging_mixin.py:188} INFO - loading chunk:7
+[2024-01-05T11:37:16.011+0000] {logging_mixin.py:188} INFO - loading chunk:8
+[2024-01-05T11:37:16.514+0000] {logging_mixin.py:188} INFO - loading chunk:9
+[2024-01-05T11:37:17.085+0000] {logging_mixin.py:188} INFO - loading chunk:10
+[2024-01-05T11:37:17.735+0000] {logging_mixin.py:188} INFO - loading chunk:11
+[2024-01-05T11:37:18.212+0000] {logging_mixin.py:188} INFO - loading chunk:12
+[2024-01-05T11:37:18.726+0000] {logging_mixin.py:188} INFO - loading chunk:13
+[2024-01-05T11:37:19.461+0000] {logging_mixin.py:188} INFO - loading chunk:14
+[2024-01-05T11:37:20.062+0000] {logging_mixin.py:188} INFO - loading chunk:15
+[2024-01-05T11:37:20.909+0000] {logging_mixin.py:188} INFO - loading chunk:16
+[2024-01-05T11:37:21.440+0000] {logging_mixin.py:188} INFO - loading chunk:17
+[2024-01-05T11:37:22.808+0000] {logging_mixin.py:188} INFO - loading chunk:18
+[2024-01-05T11:37:23.682+0000] {logging_mixin.py:188} INFO - loading chunk:19
+[2024-01-05T11:37:24.233+0000] {logging_mixin.py:188} INFO - loading chunk:20
+[2024-01-05T11:37:24.918+0000] {logging_mixin.py:188} INFO - loading chunk:21
+[2024-01-05T11:37:25.346+0000] {logging_mixin.py:188} INFO - loading chunk:22
+[2024-01-05T11:37:25.790+0000] {logging_mixin.py:188} INFO - loading chunk:23
+[2024-01-05T11:37:26.200+0000] {logging_mixin.py:188} INFO - loading chunk:24
+[2024-01-05T11:37:26.726+0000] {logging_mixin.py:188} INFO - loading chunk:25
+[2024-01-05T11:37:27.227+0000] {logging_mixin.py:188} INFO - loading chunk:26
+[2024-01-05T11:37:27.685+0000] {logging_mixin.py:188} INFO - loading chunk:27
+[2024-01-05T11:37:28.108+0000] {logging_mixin.py:188} INFO - loading chunk:28
+[2024-01-05T11:37:28.598+0000] {logging_mixin.py:188} INFO - loading chunk:29
+[2024-01-05T11:37:29.016+0000] {logging_mixin.py:188} INFO - loading chunk:30
+[2024-01-05T11:37:29.513+0000] {logging_mixin.py:188} INFO - loading chunk:31
+[2024-01-05T11:37:30.155+0000] {logging_mixin.py:188} INFO - loading chunk:32
+[2024-01-05T11:37:30.979+0000] {logging_mixin.py:188} INFO - loading chunk:33
+[2024-01-05T11:37:31.808+0000] {logging_mixin.py:188} INFO - loading chunk:34
+[2024-01-05T11:38:36.416+0000] {logging_mixin.py:188} INFO - loading chunk:35
+[2024-01-05T11:38:38.643+0000] {logging_mixin.py:188} INFO - loading chunk:36
+[2024-01-05T11:38:42.011+0000] {logging_mixin.py:188} INFO - loading chunk:37
+[2024-01-05T11:38:48.101+0000] {logging_mixin.py:188} INFO - loading chunk:38
+[2024-01-05T11:39:29.264+0000] {logging_mixin.py:188} INFO - loading chunk:39
+[2024-01-05T11:39:33.753+0000] {logging_mixin.py:188} INFO - loading chunk:40
+[2024-01-05T11:39:38.372+0000] {logging_mixin.py:188} INFO - loading chunk:41
+[2024-01-05T11:39:45.544+0000] {logging_mixin.py:188} INFO - loading chunk:42
+[2024-01-05T11:39:49.300+0000] {logging_mixin.py:188} INFO - loading chunk:43
+[2024-01-05T11:39:53.627+0000] {logging_mixin.py:188} INFO - loading chunk:44
+[2024-01-05T11:40:00.234+0000] {logging_mixin.py:188} INFO - loading chunk:45
+[2024-01-05T11:40:01.711+0000] {logging_mixin.py:188} INFO - loading chunk:46
+[2024-01-05T11:40:03.024+0000] {logging_mixin.py:188} INFO - loading chunk:47
+[2024-01-05T11:40:04.008+0000] {taskinstance.py:2699} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1890, in _execute_context
+    self.dialect.do_executemany(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 982, in do_executemany
+    context._psycopg2_fetched_rows = xtras.execute_values(
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+psycopg2.errors.UndefinedTable: relation "instacart.orders" does not exist
+LINE 1: INSERT INTO instacart.orders (order_id, user_id, eval_set, o...
+                    ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/load_data_parquet.py", line 42, in load_data
+    df.to_sql(table_name, engine, if_exists='replace', index=False, schema=schemaName)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/core/generic.py", line 2878, in to_sql
+    return sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 769, in to_sql
+    return pandas_sql.to_sql(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1920, in to_sql
+    total_inserted = sql_engine.insert_records(
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1470, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1461, in insert_records
+    return table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 1023, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/sql.py", line 929, in _execute_insert
+    result = conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1890, in _execute_context
+    self.dialect.do_executemany(
+  File "/home/airflow/.local/lib/python3.8/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 982, in do_executemany
+    context._psycopg2_fetched_rows = xtras.execute_values(
+  File "/home/airflow/.local/lib/python3.8/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "instacart.orders" does not exist
+LINE 1: INSERT INTO instacart.orders (order_id, user_id, eval_set, o...
+                    ^
+
+[SQL: INSERT INTO instacart.orders (order_id, user_id, eval_set, order_number, order_dow, order_hour_of_day, days_since_prior_order) VALUES (%(order_id)s, %(user_id)s, %(eval_set)s, %(order_number)s, %(order_dow)s, %(order_hour_of_day)s, %(days_since_prior_order)s)]
+[parameters: ({'order_id': 693022, 'user_id': 28343, 'eval_set': 'prior', 'order_number': 22, 'order_dow': 0, 'order_hour_of_day': 21, 'days_since_prior_order': 8.0}, {'order_id': 882306, 'user_id': 28343, 'eval_set': 'train', 'order_number': 23, 'order_dow': 0, 'order_hour_of_day': 21, 'days_since_prior_order': 7.0}, {'order_id': 2299531, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 1, 'order_dow': 0, 'order_hour_of_day': 11, 'days_since_prior_order': None}, {'order_id': 2819285, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 2, 'order_dow': 6, 'order_hour_of_day': 11, 'days_since_prior_order': 6.0}, {'order_id': 3362206, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 3, 'order_dow': 3, 'order_hour_of_day': 14, 'days_since_prior_order': 11.0}, {'order_id': 2640073, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 4, 'order_dow': 6, 'order_hour_of_day': 15, 'days_since_prior_order': 10.0}, {'order_id': 582071, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 5, 'order_dow': 0, 'order_hour_of_day': 15, 'days_since_prior_order': 29.0}, {'order_id': 97913, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 6, 'order_dow': 1, 'order_hour_of_day': 18, 'days_since_prior_order': 30.0}  ... displaying 10 of 10000 total bound parameter sets ...  {'order_id': 516866, 'user_id': 28934, 'eval_set': 'prior', 'order_number': 42, 'order_dow': 5, 'order_hour_of_day': 17, 'days_since_prior_order': 24.0}, {'order_id': 3085825, 'user_id': 28934, 'eval_set': 'test', 'order_number': 43, 'order_dow': 4, 'order_hour_of_day': 16, 'days_since_prior_order': 20.0})]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+[2024-01-05T11:40:04.198+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=load_data_parquet, task_id=load_data_orders, execution_date=20240105T112045, start_date=20240105T113711, end_date=20240105T114004
+[2024-01-05T11:40:04.280+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 32 for task load_data_orders ((psycopg2.errors.UndefinedTable) relation "instacart.orders" does not exist
+LINE 1: INSERT INTO instacart.orders (order_id, user_id, eval_set, o...
+                    ^
+
+[SQL: INSERT INTO instacart.orders (order_id, user_id, eval_set, order_number, order_dow, order_hour_of_day, days_since_prior_order) VALUES (%(order_id)s, %(user_id)s, %(eval_set)s, %(order_number)s, %(order_dow)s, %(order_hour_of_day)s, %(days_since_prior_order)s)]
+[parameters: ({'order_id': 693022, 'user_id': 28343, 'eval_set': 'prior', 'order_number': 22, 'order_dow': 0, 'order_hour_of_day': 21, 'days_since_prior_order': 8.0}, {'order_id': 882306, 'user_id': 28343, 'eval_set': 'train', 'order_number': 23, 'order_dow': 0, 'order_hour_of_day': 21, 'days_since_prior_order': 7.0}, {'order_id': 2299531, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 1, 'order_dow': 0, 'order_hour_of_day': 11, 'days_since_prior_order': None}, {'order_id': 2819285, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 2, 'order_dow': 6, 'order_hour_of_day': 11, 'days_since_prior_order': 6.0}, {'order_id': 3362206, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 3, 'order_dow': 3, 'order_hour_of_day': 14, 'days_since_prior_order': 11.0}, {'order_id': 2640073, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 4, 'order_dow': 6, 'order_hour_of_day': 15, 'days_since_prior_order': 10.0}, {'order_id': 582071, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 5, 'order_dow': 0, 'order_hour_of_day': 15, 'days_since_prior_order': 29.0}, {'order_id': 97913, 'user_id': 28344, 'eval_set': 'prior', 'order_number': 6, 'order_dow': 1, 'order_hour_of_day': 18, 'days_since_prior_order': 30.0}  ... displaying 10 of 10000 total bound parameter sets ...  {'order_id': 516866, 'user_id': 28934, 'eval_set': 'prior', 'order_number': 42, 'order_dow': 5, 'order_hour_of_day': 17, 'days_since_prior_order': 24.0}, {'order_id': 3085825, 'user_id': 28934, 'eval_set': 'test', 'order_number': 43, 'order_dow': 4, 'order_hour_of_day': 16, 'days_since_prior_order': 20.0})]
+(Background on this error at: https://sqlalche.me/e/14/f405); 575)
+[2024-01-05T11:40:04.326+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-01-05T11:40:04.463+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

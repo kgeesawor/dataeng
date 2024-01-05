@@ -1,0 +1,98 @@
+[2024-01-05T12:00:24.889+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_data_parquet.load_data_order_products__prior manual__2024-01-05T12:00:08.484737+00:00 [queued]>
+[2024-01-05T12:00:24.906+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_data_parquet.load_data_order_products__prior manual__2024-01-05T12:00:08.484737+00:00 [queued]>
+[2024-01-05T12:00:24.907+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-05T12:00:24.937+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): load_data_order_products__prior> on 2024-01-05 12:00:08.484737+00:00
+[2024-01-05T12:00:24.945+0000] {standard_task_runner.py:60} INFO - Started process 66 to run task
+[2024-01-05T12:00:24.951+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'load_data_parquet', 'load_data_order_products__prior', 'manual__2024-01-05T12:00:08.484737+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/load_data_parquet.py', '--cfg-path', '/tmp/tmp690sevui']
+[2024-01-05T12:00:24.955+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask load_data_order_products__prior
+[2024-01-05T12:00:25.054+0000] {task_command.py:423} INFO - Running <TaskInstance: load_data_parquet.load_data_order_products__prior manual__2024-01-05T12:00:08.484737+00:00 [running]> on host e80d60e00ebe
+[2024-01-05T12:00:25.192+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_data_parquet' AIRFLOW_CTX_TASK_ID='load_data_order_products__prior' AIRFLOW_CTX_EXECUTION_DATE='2024-01-05T12:00:08.484737+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-05T12:00:08.484737+00:00'
+[2024-01-05T12:00:25.217+0000] {logging_mixin.py:188} INFO - starting:order_products__prior
+[2024-01-05T12:00:25.252+0000] {logging_mixin.py:188} INFO - loading chunk:0
+[2024-01-05T12:00:28.346+0000] {logging_mixin.py:188} INFO - loading chunk:1
+[2024-01-05T12:00:31.241+0000] {logging_mixin.py:188} INFO - loading chunk:2
+[2024-01-05T12:00:34.064+0000] {logging_mixin.py:188} INFO - loading chunk:3
+[2024-01-05T12:00:37.163+0000] {logging_mixin.py:188} INFO - loading chunk:4
+[2024-01-05T12:00:40.036+0000] {logging_mixin.py:188} INFO - loading chunk:5
+[2024-01-05T12:00:43.411+0000] {logging_mixin.py:188} INFO - loading chunk:6
+[2024-01-05T12:00:46.330+0000] {logging_mixin.py:188} INFO - loading chunk:7
+[2024-01-05T12:00:49.310+0000] {logging_mixin.py:188} INFO - loading chunk:8
+[2024-01-05T12:00:52.190+0000] {logging_mixin.py:188} INFO - loading chunk:9
+[2024-01-05T12:00:55.319+0000] {logging_mixin.py:188} INFO - loading chunk:10
+[2024-01-05T12:00:58.392+0000] {logging_mixin.py:188} INFO - loading chunk:11
+[2024-01-05T12:01:01.811+0000] {logging_mixin.py:188} INFO - loading chunk:12
+[2024-01-05T12:01:04.878+0000] {logging_mixin.py:188} INFO - loading chunk:13
+[2024-01-05T12:01:07.896+0000] {logging_mixin.py:188} INFO - loading chunk:14
+[2024-01-05T12:01:11.030+0000] {logging_mixin.py:188} INFO - loading chunk:15
+[2024-01-05T12:01:14.971+0000] {logging_mixin.py:188} INFO - loading chunk:16
+[2024-01-05T12:01:18.314+0000] {logging_mixin.py:188} INFO - loading chunk:17
+[2024-01-05T12:01:21.604+0000] {logging_mixin.py:188} INFO - loading chunk:18
+[2024-01-05T12:01:24.996+0000] {logging_mixin.py:188} INFO - loading chunk:19
+[2024-01-05T12:01:28.791+0000] {logging_mixin.py:188} INFO - loading chunk:20
+[2024-01-05T12:01:32.302+0000] {logging_mixin.py:188} INFO - loading chunk:21
+[2024-01-05T12:01:35.589+0000] {logging_mixin.py:188} INFO - loading chunk:22
+[2024-01-05T12:01:38.949+0000] {logging_mixin.py:188} INFO - loading chunk:23
+[2024-01-05T12:01:42.326+0000] {logging_mixin.py:188} INFO - loading chunk:24
+[2024-01-05T12:01:45.872+0000] {logging_mixin.py:188} INFO - loading chunk:25
+[2024-01-05T12:01:49.290+0000] {logging_mixin.py:188} INFO - loading chunk:26
+[2024-01-05T12:01:52.745+0000] {logging_mixin.py:188} INFO - loading chunk:27
+[2024-01-05T12:01:56.021+0000] {logging_mixin.py:188} INFO - loading chunk:28
+[2024-01-05T12:01:59.371+0000] {logging_mixin.py:188} INFO - loading chunk:29
+[2024-01-05T12:02:02.873+0000] {logging_mixin.py:188} INFO - loading chunk:30
+[2024-01-05T12:02:06.033+0000] {logging_mixin.py:188} INFO - loading chunk:31
+[2024-01-05T12:02:09.259+0000] {logging_mixin.py:188} INFO - loading chunk:32
+[2024-01-05T12:02:12.547+0000] {logging_mixin.py:188} INFO - loading chunk:33
+[2024-01-05T12:02:15.932+0000] {logging_mixin.py:188} INFO - loading chunk:34
+[2024-01-05T12:02:19.496+0000] {logging_mixin.py:188} INFO - loading chunk:35
+[2024-01-05T12:02:22.937+0000] {logging_mixin.py:188} INFO - loading chunk:36
+[2024-01-05T12:02:26.059+0000] {logging_mixin.py:188} INFO - loading chunk:37
+[2024-01-05T12:02:29.207+0000] {logging_mixin.py:188} INFO - loading chunk:38
+[2024-01-05T12:02:32.307+0000] {logging_mixin.py:188} INFO - loading chunk:39
+[2024-01-05T12:02:35.568+0000] {logging_mixin.py:188} INFO - loading chunk:40
+[2024-01-05T12:02:39.154+0000] {logging_mixin.py:188} INFO - loading chunk:41
+[2024-01-05T12:02:42.440+0000] {logging_mixin.py:188} INFO - loading chunk:42
+[2024-01-05T12:02:45.615+0000] {logging_mixin.py:188} INFO - loading chunk:43
+[2024-01-05T12:02:49.348+0000] {logging_mixin.py:188} INFO - loading chunk:44
+[2024-01-05T12:02:52.706+0000] {logging_mixin.py:188} INFO - loading chunk:45
+[2024-01-05T12:02:56.259+0000] {logging_mixin.py:188} INFO - loading chunk:46
+[2024-01-05T12:03:00.921+0000] {logging_mixin.py:188} INFO - loading chunk:47
+[2024-01-05T12:03:05.124+0000] {logging_mixin.py:188} INFO - loading chunk:48
+[2024-01-05T12:03:08.905+0000] {logging_mixin.py:188} INFO - loading chunk:49
+[2024-01-05T12:03:14.640+0000] {logging_mixin.py:188} INFO - loading chunk:50
+[2024-01-05T12:03:20.396+0000] {logging_mixin.py:188} INFO - loading chunk:51
+[2024-01-05T12:03:24.171+0000] {logging_mixin.py:188} INFO - loading chunk:52
+[2024-01-05T12:03:27.727+0000] {logging_mixin.py:188} INFO - loading chunk:53
+[2024-01-05T12:03:31.763+0000] {logging_mixin.py:188} INFO - loading chunk:54
+[2024-01-05T12:03:36.414+0000] {logging_mixin.py:188} INFO - loading chunk:55
+[2024-01-05T12:03:40.444+0000] {logging_mixin.py:188} INFO - loading chunk:56
+[2024-01-05T12:03:44.713+0000] {logging_mixin.py:188} INFO - loading chunk:57
+[2024-01-05T12:03:48.740+0000] {logging_mixin.py:188} INFO - loading chunk:58
+[2024-01-05T12:03:53.281+0000] {logging_mixin.py:188} INFO - loading chunk:59
+[2024-01-05T12:03:57.645+0000] {logging_mixin.py:188} INFO - loading chunk:60
+[2024-01-05T12:04:02.909+0000] {logging_mixin.py:188} INFO - loading chunk:61
+[2024-01-05T12:04:10.917+0000] {logging_mixin.py:188} INFO - loading chunk:62
+[2024-01-05T12:04:18.289+0000] {logging_mixin.py:188} INFO - loading chunk:63
+[2024-01-05T12:04:25.722+0000] {logging_mixin.py:188} INFO - loading chunk:64
+[2024-01-05T12:04:32.216+0000] {logging_mixin.py:188} INFO - loading chunk:65
+[2024-01-05T12:04:37.037+0000] {logging_mixin.py:188} INFO - loading chunk:66
+[2024-01-05T12:04:42.295+0000] {logging_mixin.py:188} INFO - loading chunk:67
+[2024-01-05T12:04:47.441+0000] {logging_mixin.py:188} INFO - loading chunk:68
+[2024-01-05T12:04:54.432+0000] {logging_mixin.py:188} INFO - loading chunk:69
+[2024-01-05T12:05:01.807+0000] {logging_mixin.py:188} INFO - loading chunk:70
+[2024-01-05T12:05:07.604+0000] {logging_mixin.py:188} INFO - loading chunk:71
+[2024-01-05T12:05:13.311+0000] {logging_mixin.py:188} INFO - loading chunk:72
+[2024-01-05T12:05:19.593+0000] {logging_mixin.py:188} INFO - loading chunk:73
+[2024-01-05T12:05:24.831+0000] {logging_mixin.py:188} INFO - loading chunk:74
+[2024-01-05T12:05:29.108+0000] {logging_mixin.py:188} INFO - loading chunk:75
+[2024-01-05T12:05:33.408+0000] {logging_mixin.py:188} INFO - loading chunk:76
+[2024-01-05T12:05:36.917+0000] {logging_mixin.py:188} INFO - loading chunk:77
+[2024-01-05T12:05:40.165+0000] {logging_mixin.py:188} INFO - loading chunk:78
+[2024-01-05T12:05:43.546+0000] {logging_mixin.py:188} INFO - loading chunk:79
+[2024-01-05T12:05:46.814+0000] {logging_mixin.py:188} INFO - loading chunk:80
+[2024-01-05T12:05:51.435+0000] {logging_mixin.py:188} INFO - loading chunk:81
+[2024-01-05T12:05:54.933+0000] {logging_mixin.py:188} INFO - loading chunk:82
+[2024-01-05T12:05:58.446+0000] {logging_mixin.py:188} INFO - loading chunk:83
+[2024-01-05T12:06:01.778+0000] {logging_mixin.py:188} INFO - loading chunk:84
+[2024-01-05T12:06:05.293+0000] {logging_mixin.py:188} INFO - loading chunk:85
+[2024-01-05T12:06:08.944+0000] {logging_mixin.py:188} INFO - loading chunk:86
+[2024-01-05T12:06:12.617+0000] {logging_mixin.py:188} INFO - loading chunk:87

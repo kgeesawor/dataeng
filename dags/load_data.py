@@ -28,14 +28,17 @@ def load_data(dataFolder, schemaName):
 
     # Create output schema if not exists
     with engine.connect() as connection:
-        connection.execute("CREATE SCHEMA IF NOT EXISTS instacart")
+        connection.execute(f"CREATE SCHEMA IF NOT EXISTS {schemaName}")
 
     # Create table from chunks for each file
     for filename in filenames:
-        reader = pd.read_csv(path + filename + ".csv", chunksize=chunk_size)
+        reader = pd.read_parquet(path + filename + ".csv", chunksize=chunk_size)
         for i, chunk in enumerate(reader):
             table_name = f"{filename}"
-            chunk.to_sql(table_name, engine, if_exists='append', index=False, schema=schemaName)
+            if i==0:            
+                chunk.to_sql(table_name, engine, if_exists='replace', index=False, schema=schemaName)
+            else:
+                chunk.to_sql(table_name, engine, if_exists='append', index=False, schema=schemaName)
 
 # Create the task
 load_data_task = PythonOperator(

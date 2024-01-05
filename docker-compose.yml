@@ -1,17 +1,17 @@
 version: '3'
 services:
-  minio:
-    image: minio/minio
-    container_name: minio
-    volumes:
-      - ~/minio/data:/data
-    ports:
-      - "9000:9000"
-      - "9001:9001"
-    environment:
-      MINIO_ROOT_USER: minio
-      MINIO_ROOT_PASSWORD: minio123
-    command: server --console-address :9001 /data
+  # minio:
+  #   image: minio/minio
+  #   container_name: minio
+  #   volumes:
+  #     - ~/minio/data:/data
+  #   ports:
+  #     - "9000:9000"
+  #     - "9002:9002"
+  #   environment:
+  #     MINIO_ROOT_USER: minio
+  #     MINIO_ROOT_PASSWORD: minio123
+  #   command: server --console-address :9002 /data
 
 #    docker run -p 9000:9000 -p 9001:9001 --name minio -d -v ~/minio/data:/data -e "MINIO_ROOT_USER=minio" -e "MINIO_ROOT_PASSWORD=minio123" minio/minio server --console-address :9001 /data
 
