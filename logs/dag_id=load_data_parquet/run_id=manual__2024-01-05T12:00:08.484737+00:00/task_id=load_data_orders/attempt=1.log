@@ -1,0 +1,49 @@
+[2024-01-05T12:18:30.895+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_data_parquet.load_data_orders manual__2024-01-05T12:00:08.484737+00:00 [queued]>
+[2024-01-05T12:18:30.909+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_data_parquet.load_data_orders manual__2024-01-05T12:00:08.484737+00:00 [queued]>
+[2024-01-05T12:18:30.910+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-01-05T12:18:30.932+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): load_data_orders> on 2024-01-05 12:00:08.484737+00:00
+[2024-01-05T12:18:30.940+0000] {standard_task_runner.py:60} INFO - Started process 255 to run task
+[2024-01-05T12:18:30.944+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'load_data_parquet', 'load_data_orders', 'manual__2024-01-05T12:00:08.484737+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/load_data_parquet.py', '--cfg-path', '/tmp/tmpasxcp8z4']
+[2024-01-05T12:18:30.948+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask load_data_orders
+[2024-01-05T12:18:31.038+0000] {task_command.py:423} INFO - Running <TaskInstance: load_data_parquet.load_data_orders manual__2024-01-05T12:00:08.484737+00:00 [running]> on host e80d60e00ebe
+[2024-01-05T12:18:31.219+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_data_parquet' AIRFLOW_CTX_TASK_ID='load_data_orders' AIRFLOW_CTX_EXECUTION_DATE='2024-01-05T12:00:08.484737+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-05T12:00:08.484737+00:00'
+[2024-01-05T12:18:31.242+0000] {logging_mixin.py:188} INFO - starting:orders
+[2024-01-05T12:18:31.301+0000] {logging_mixin.py:188} INFO - loading chunk:0 of 35
+[2024-01-05T12:18:37.001+0000] {logging_mixin.py:188} INFO - loading chunk:1 of 35
+[2024-01-05T12:18:41.880+0000] {logging_mixin.py:188} INFO - loading chunk:2 of 35
+[2024-01-05T12:18:47.048+0000] {logging_mixin.py:188} INFO - loading chunk:3 of 35
+[2024-01-05T12:18:52.286+0000] {logging_mixin.py:188} INFO - loading chunk:4 of 35
+[2024-01-05T12:18:57.473+0000] {logging_mixin.py:188} INFO - loading chunk:5 of 35
+[2024-01-05T12:19:03.559+0000] {logging_mixin.py:188} INFO - loading chunk:6 of 35
+[2024-01-05T12:19:08.626+0000] {logging_mixin.py:188} INFO - loading chunk:7 of 35
+[2024-01-05T12:19:13.508+0000] {logging_mixin.py:188} INFO - loading chunk:8 of 35
+[2024-01-05T12:19:18.226+0000] {logging_mixin.py:188} INFO - loading chunk:9 of 35
+[2024-01-05T12:19:23.527+0000] {logging_mixin.py:188} INFO - loading chunk:10 of 35
+[2024-01-05T12:19:28.920+0000] {logging_mixin.py:188} INFO - loading chunk:11 of 35
+[2024-01-05T12:19:33.504+0000] {logging_mixin.py:188} INFO - loading chunk:12 of 35
+[2024-01-05T12:19:38.420+0000] {logging_mixin.py:188} INFO - loading chunk:13 of 35
+[2024-01-05T12:19:43.325+0000] {logging_mixin.py:188} INFO - loading chunk:14 of 35
+[2024-01-05T12:19:47.926+0000] {logging_mixin.py:188} INFO - loading chunk:15 of 35
+[2024-01-05T12:19:53.022+0000] {logging_mixin.py:188} INFO - loading chunk:16 of 35
+[2024-01-05T12:19:57.868+0000] {logging_mixin.py:188} INFO - loading chunk:17 of 35
+[2024-01-05T12:20:02.549+0000] {logging_mixin.py:188} INFO - loading chunk:18 of 35
+[2024-01-05T12:20:07.091+0000] {logging_mixin.py:188} INFO - loading chunk:19 of 35
+[2024-01-05T12:20:11.733+0000] {logging_mixin.py:188} INFO - loading chunk:20 of 35
+[2024-01-05T12:20:16.108+0000] {logging_mixin.py:188} INFO - loading chunk:21 of 35
+[2024-01-05T12:20:20.776+0000] {logging_mixin.py:188} INFO - loading chunk:22 of 35
+[2024-01-05T12:20:25.552+0000] {logging_mixin.py:188} INFO - loading chunk:23 of 35
+[2024-01-05T12:20:30.622+0000] {logging_mixin.py:188} INFO - loading chunk:24 of 35
+[2024-01-05T12:20:35.636+0000] {logging_mixin.py:188} INFO - loading chunk:25 of 35
+[2024-01-05T12:20:40.104+0000] {logging_mixin.py:188} INFO - loading chunk:26 of 35
+[2024-01-05T12:20:44.285+0000] {logging_mixin.py:188} INFO - loading chunk:27 of 35
+[2024-01-05T12:20:48.622+0000] {logging_mixin.py:188} INFO - loading chunk:28 of 35
+[2024-01-05T12:20:52.820+0000] {logging_mixin.py:188} INFO - loading chunk:29 of 35
+[2024-01-05T12:20:57.483+0000] {logging_mixin.py:188} INFO - loading chunk:30 of 35
+[2024-01-05T12:21:02.049+0000] {logging_mixin.py:188} INFO - loading chunk:31 of 35
+[2024-01-05T12:21:06.784+0000] {logging_mixin.py:188} INFO - loading chunk:32 of 35
+[2024-01-05T12:21:11.860+0000] {logging_mixin.py:188} INFO - loading chunk:33 of 35
+[2024-01-05T12:21:16.939+0000] {logging_mixin.py:188} INFO - loading chunk:34 of 35
+[2024-01-05T12:21:17.953+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-01-05T12:21:17.971+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=load_data_parquet, task_id=load_data_orders, execution_date=20240105T120008, start_date=20240105T121830, end_date=20240105T122117
+[2024-01-05T12:21:18.047+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-01-05T12:21:18.076+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
