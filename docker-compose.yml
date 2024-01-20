@@ -68,7 +68,8 @@ services:
       - postgres
     volumes:
       - ~/.dbt:/root/.dbt
-      - ~/git/app:/dbt
+#      - ~/git/app:/dbt
+      - ~/git/jaffle_shop:/dbt
     command: ["run"]
 
       
